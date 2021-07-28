@@ -1,0 +1,11 @@
+{
+    "ServiceDiscovery": {
+        "Address": "127.0.0.1",
+        "Port": "10001"
+    },
+    "thisService": {
+        "Name": "oauth2",
+        "Address": "127.0.0.1",
+        "Port": "10002"
+    }
+}

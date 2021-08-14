@@ -1,7 +1,7 @@
 package rsaservice
 
 import (
-	"github.com/Berni-Shen/lion-go/oauth2/service/rsaservice"
+	"github.com/bernishen/lion-go/oauth2/service/rsaservice"
 	"testing"
 )
 

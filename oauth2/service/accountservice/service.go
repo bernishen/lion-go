@@ -1,15 +1,15 @@
 package accountservice
 
 import (
-	"github.com/Berni-Shen/lion-go/oauth2/common/pwdprovider"
-	"github.com/Berni-Shen/lion-go/oauth2/dal/dbpool"
-	"github.com/Berni-Shen/lion-go/oauth2/dal/domain"
-	pd "github.com/Berni-Shen/lion-go/oauth2/service/accountservice/domain"
-	"github.com/Berni-Shen/lion-go/oauth2/service/pwdservice"
-	"github.com/Berni-Shen/lion-go/oauth2/service/redisservice"
-	"github.com/Berni-Shen/lion-go/oauth2/service/sessionservice"
-	"github.com/Berni-Shen/lion-go/oauth2/service/tokenservice"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/oauth2/common/pwdprovider"
+	"github.com/bernishen/lion-go/oauth2/dal/dbpool"
+	"github.com/bernishen/lion-go/oauth2/dal/domain"
+	pd "github.com/bernishen/lion-go/oauth2/service/accountservice/domain"
+	"github.com/bernishen/lion-go/oauth2/service/pwdservice"
+	"github.com/bernishen/lion-go/oauth2/service/redisservice"
+	"github.com/bernishen/lion-go/oauth2/service/sessionservice"
+	"github.com/bernishen/lion-go/oauth2/service/tokenservice"
+	"github.com/bernishen/lion-go/utils/exception"
 )
 
 const (
@@ -192,7 +192,7 @@ func findRoles(userID string) (*[]domain.Role, *exception.Exception) {
 	}
 	defer dbpool.Put(db)
 	var unr []domain.UserNRole
-	db.Find(&unr, "UserID = ?", userID)
+	db.Find(&unr, "user_id = ?", userID)
 	roles := make([]domain.Role, len(unr))
 	for i := 0; i < len(unr); i++ {
 		item := unr[i]

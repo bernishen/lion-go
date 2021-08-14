@@ -2,10 +2,11 @@ package system
 
 import (
 	"encoding/json"
-	"github.com/Berni-Shen/lion-go/oauth2/controller/system/domain"
-	"github.com/Berni-Shen/lion-go/oauth2/service/sessionservice"
-	"github.com/Berni-Shen/lion-go/utils/router"
-	"github.com/Berni-Shen/lion-go/utils/websocket"
+	"github.com/bernishen/lion-go/oauth2/controller/system/domain"
+	"github.com/bernishen/lion-go/oauth2/route"
+	"github.com/bernishen/lion-go/oauth2/service/sessionservice"
+	"github.com/bernishen/lion-go/utils/router"
+	"github.com/bernishen/lion-go/utils/websocket"
 	ws "github.com/gorilla/websocket"
 )
 
@@ -15,7 +16,7 @@ func init() {
 	wsService = websocket.InitWebSocket(20, callRoute)
 	s := router.InitController("/system/{wsID}").
 		Get(wsService.Handler, "wsID")
-	router.Default().Register(s)
+	route.Router.Register(s)
 }
 
 func callRoute(wsID string, msg *websocket.WSMessage) *websocket.WSReturn {

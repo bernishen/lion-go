@@ -1,9 +1,9 @@
 package dbskim
 
 import (
-	"github.com/Berni-Shen/lion-go/oauth2/common/dao/dbpool"
-	"github.com/Berni-Shen/lion-go/oauth2/common/dao/domain"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/oauth2/common/dao/dbpool"
+	"github.com/bernishen/lion-go/oauth2/common/dao/domain"
+	"github.com/bernishen/lion-go/utils/exception"
 )
 
 func InitTables() (bool, *exception.Exception) {

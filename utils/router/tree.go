@@ -1,7 +1,7 @@
 package router
 
 import (
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/exception"
 	"strings"
 )
 

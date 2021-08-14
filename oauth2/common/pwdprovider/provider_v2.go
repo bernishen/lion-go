@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/sha256"
 	"encoding/base64"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/exception"
 )
 
 type providerV2 struct {

@@ -2,7 +2,7 @@ package system
 
 import (
 	"encoding/json"
-	"github.com/Berni-Shen/lion-go/utils/websocket"
+	"github.com/bernishen/lion-go/utils/websocket"
 	ws "github.com/gorilla/websocket"
 	"log"
 )

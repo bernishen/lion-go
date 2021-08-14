@@ -3,7 +3,7 @@ package metest
 import (
 	"testing"
 
-	"github.com/Berni-Shen/lion-go/oauth2/common/pwdprovider"
+	"github.com/bernishen/lion-go/oauth2/common/pwdprovider"
 )
 
 func TestProviderV1(t *testing.T) {

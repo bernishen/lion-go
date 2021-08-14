@@ -1,19 +1,20 @@
 package user
 
 import (
-	"github.com/Berni-Shen/lion-go/oauth2/service/accountservice"
-	"github.com/Berni-Shen/lion-go/oauth2/service/accountservice/domain"
-	"github.com/Berni-Shen/lion-go/utils/exception"
-	"github.com/Berni-Shen/lion-go/utils/router"
+	"github.com/bernishen/lion-go/oauth2/route"
+	"github.com/bernishen/lion-go/oauth2/service/accountservice"
+	"github.com/bernishen/lion-go/oauth2/service/accountservice/domain"
+	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/router"
 )
 
 func init() {
-	u := router.InitController("/oauth2/account/:userid/:pwd").
+	u := router.InitController("/account/:userid/:pwd").
 		Get(signIn, "userid", "pwd").
 		Post(signUp).
 		Delete(signOut).
 		Delete(accountDelete, "userid", "pwd")
-	router.Default().Register(u)
+	route.Router.Register(u)
 }
 
 type user struct {

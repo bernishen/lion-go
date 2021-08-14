@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"crypto/md5"
 	"encoding/base64"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/exception"
 )
 
 type providerV1 struct {

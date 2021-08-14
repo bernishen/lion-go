@@ -1,10 +1,10 @@
 package registerservice
 
 import (
-	"github.com/Berni-Shen/lion-go/servicediscovery/model/dao/dbpool"
-	"github.com/Berni-Shen/lion-go/servicediscovery/model/dao/entities"
-	"github.com/Berni-Shen/lion-go/servicediscovery/model/service/request"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/servicediscovery/model/dao/dbpool"
+	"github.com/bernishen/lion-go/servicediscovery/model/dao/entities"
+	"github.com/bernishen/lion-go/servicediscovery/model/service/request"
+	"github.com/bernishen/lion-go/utils/exception"
 )
 
 // func Register() *utils.Exception {

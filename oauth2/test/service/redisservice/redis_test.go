@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/Berni-Shen/lion-go/oauth2/common/dao/domain"
-	"github.com/Berni-Shen/lion-go/oauth2/service/redisservice"
+	"github.com/bernishen/lion-go/oauth2/common/dao/domain"
+	"github.com/bernishen/lion-go/oauth2/service/redisservice"
 )
 
 func TestSetKey(t *testing.T) {

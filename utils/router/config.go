@@ -1,6 +1,7 @@
 package router
 
 type Config struct {
-	Address string
-	Port    string
+	Address     string
+	Port        string
+	RoutePrefix string
 }

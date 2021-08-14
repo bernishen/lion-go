@@ -1,7 +1,7 @@
 package dao
 
 import (
-	"github.com/Berni-Shen/lion-go/oauth2/common/dao/dbskim"
+	"github.com/bernishen/lion-go/oauth2/common/dao/dbskim"
 	"testing"
 )
 

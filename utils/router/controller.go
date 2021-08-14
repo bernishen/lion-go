@@ -2,8 +2,8 @@ package router
 
 import (
 	"encoding/json"
-	"github.com/Berni-Shen/lion-go/utils/exception"
-	"github.com/Berni-Shen/lion-go/utils/result"
+	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/result"
 	"net/http"
 	"reflect"
 	"strconv"

@@ -3,8 +3,8 @@ package tokenservice
 import (
 	"testing"
 
-	"github.com/Berni-Shen/lion-go/oauth2/common/dao/domain"
-	"github.com/Berni-Shen/lion-go/oauth2/service/sessionservice"
+	"github.com/bernishen/lion-go/oauth2/common/dao/domain"
+	"github.com/bernishen/lion-go/oauth2/service/sessionservice"
 )
 
 func TestSign(t *testing.T) {

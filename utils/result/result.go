@@ -8,7 +8,7 @@ type R struct {
 
 func OK(data *interface{}) *R {
 	r := R{
-		Flag:    false,
+		Flag:    true,
 		Message: "success",
 		Data:    data,
 	}

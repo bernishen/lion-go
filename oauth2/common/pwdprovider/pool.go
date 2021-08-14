@@ -1,7 +1,7 @@
 package pwdprovider
 
 import (
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/exception"
 )
 
 var pool [2]iPwdProvider

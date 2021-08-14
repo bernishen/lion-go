@@ -3,12 +3,12 @@ package sessionservice
 import (
 	"bytes"
 	"encoding/json"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/exception"
 	"strings"
 	"time"
 
-	"github.com/Berni-Shen/lion-go/oauth2/dal/domain"
-	"github.com/Berni-Shen/lion-go/oauth2/service/redisservice"
+	"github.com/bernishen/lion-go/oauth2/dal/domain"
+	"github.com/bernishen/lion-go/oauth2/service/redisservice"
 )
 
 const (

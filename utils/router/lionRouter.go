@@ -2,16 +2,11 @@ package router
 
 import (
 	"fmt"
-	"github.com/Berni-Shen/lion-go/utils/exception"
+	"github.com/bernishen/lion-go/utils/exception"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"strings"
-)
-
-const (
-	HttpRequest_1 = iota
-	WebSocket
 )
 
 type ILionController interface {
@@ -24,7 +19,9 @@ type ILionController interface {
 }
 
 type LionRouter struct {
-	t *tree
+	t      *tree
+	route  string
+	config *Config
 }
 
 type Context struct {
@@ -33,32 +30,64 @@ type Context struct {
 	Request *http.Request
 }
 
-var defaultInstance = &LionRouter{t: initTree()}
-
-// Default is get this router  default instance.
-func Default() *LionRouter {
-	return defaultInstance
+// Default is get this route  default instance.
+func InitRouter(c *Config) *LionRouter {
+	return &LionRouter{
+		t:      initTree(),
+		route:  optimiizeRoute(c.RoutePrefix),
+		config: c,
+	}
 }
 
-// ListenDefault is to start listen by this router default instance.
-func ListenDefault(config Config) {
-	server := config.Address + ":" + config.Port
-	fmt.Println("\tLinsen address:" + config.Address)
-	log.Fatal(http.ListenAndServe(server, defaultInstance))
+func addRoute(r1 string, r2 string) string {
+	rt1 := optimiizeRoute(r1)
+	rt2 := optimiizeRoute(r2)
+	if rt2 == "/" {
+		return rt1
+	}
+	if rt1 == "/" {
+		return rt2
+	}
+	return rt1 + rt2
 }
 
-func (*LionRouter) ServeHTTP(w http.ResponseWriter, req *http.Request) {
-	findAndRun(w, req)
+func optimiizeRoute(r string) string {
+	rt := strings.Trim(r, " ")
+	if rt == "/" {
+		return rt
+	}
+	if rt == "" {
+		rt = "/"
+		return rt
+	}
+	if rt[len(rt)-1:] == "/" {
+		rt = rt[:len(rt)-1]
+	}
+	if rt[:1] != "/" {
+		rt = "/" + rt
+	}
+	return rt
 }
 
-func findAndRun(w http.ResponseWriter, req *http.Request) {
+// ListenDefault is to start listen by this route default instance.
+func ListenDefault(r *LionRouter) {
+	server := r.config.Address + ":" + r.config.Port
+	fmt.Println("\tLinsen address:" + server)
+	log.Fatal(http.ListenAndServe(server, r))
+}
+
+func (r *LionRouter) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	r.findAndRun(w, req)
+}
+
+func (r *LionRouter) findAndRun(w http.ResponseWriter, req *http.Request) {
 	urlRoute := req.URL.Path
-	c, params, ex := defaultInstance.t.find(urlRoute)
+	c, params, ex := r.t.find(urlRoute)
 	if ex != nil {
+		w.WriteHeader(http.StatusNotFound)
 		msg := []byte(ex.Message)
 		_, err := w.Write(msg)
 		if err != nil {
-			w.WriteHeader(http.StatusInternalServerError)
 			_, err = w.Write([]byte(err.Error()))
 		}
 		return

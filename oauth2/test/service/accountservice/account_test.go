@@ -6,12 +6,12 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
-	"github.com/Berni-Shen/lion-go/oauth2/service/rsaservice"
+	"github.com/bernishen/lion-go/oauth2/service/rsaservice"
 	"github.com/google/uuid"
 	"testing"
 
-	"github.com/Berni-Shen/lion-go/oauth2/service/accountservice"
-	"github.com/Berni-Shen/lion-go/oauth2/service/accountservice/domain"
+	"github.com/bernishen/lion-go/oauth2/service/accountservice"
+	"github.com/bernishen/lion-go/oauth2/service/accountservice/domain"
 )
 
 func TestSignUp(t *testing.T) {

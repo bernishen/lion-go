@@ -1,7 +1,7 @@
 package sessionservice
 
 import (
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"strings"
 	"time"
 

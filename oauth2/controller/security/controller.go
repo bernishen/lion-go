@@ -4,7 +4,7 @@ import (
 	"github.com/bernishen/lion-go/oauth2/route"
 	"github.com/bernishen/lion-go/oauth2/service/rsaservice"
 	"github.com/bernishen/lion-go/oauth2/service/securityservice"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"github.com/bernishen/lion-go/utils/router"
 	"strings"
 )

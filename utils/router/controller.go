@@ -2,7 +2,7 @@ package router
 
 import (
 	"encoding/json"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"github.com/bernishen/lion-go/utils/result"
 	"net/http"
 	"reflect"

@@ -5,7 +5,7 @@ import (
 	"github.com/bernishen/lion-go/oauth2/dal/dbpool"
 	"github.com/bernishen/lion-go/oauth2/dal/domain"
 	"github.com/bernishen/lion-go/oauth2/service/redisservice"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 )
 
 func FindPublicKey(scope string, version int) (string, error) {

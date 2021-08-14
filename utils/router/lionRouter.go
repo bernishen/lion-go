@@ -2,7 +2,7 @@ package router
 
 import (
 	"fmt"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"io/ioutil"
 	"log"
 	"net/http"

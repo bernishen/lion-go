@@ -6,7 +6,7 @@ import (
 	"crypto/rsa"
 	"crypto/x509"
 	"encoding/pem"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"strings"
 )
 

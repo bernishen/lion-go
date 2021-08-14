@@ -1,7 +1,7 @@
 package redisservice
 
 import (
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"time"
 
 	"github.com/garyburd/redigo/redis"

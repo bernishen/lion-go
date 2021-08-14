@@ -1,6 +1,7 @@
 package accountservice
 
 import (
+	"github.com/bernishen/exception"
 	"github.com/bernishen/lion-go/oauth2/common/pwdprovider"
 	"github.com/bernishen/lion-go/oauth2/dal/dbpool"
 	"github.com/bernishen/lion-go/oauth2/dal/domain"
@@ -9,7 +10,6 @@ import (
 	"github.com/bernishen/lion-go/oauth2/service/redisservice"
 	"github.com/bernishen/lion-go/oauth2/service/sessionservice"
 	"github.com/bernishen/lion-go/oauth2/service/tokenservice"
-	"github.com/bernishen/lion-go/utils/exception"
 )
 
 const (

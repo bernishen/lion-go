@@ -3,7 +3,7 @@ package pwdservice
 import (
 	"github.com/bernishen/lion-go/oauth2/common/pwdprovider"
 	"github.com/bernishen/lion-go/oauth2/service/securityservice"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 )
 
 // ConvertPwd : Converted the password format from page to database.

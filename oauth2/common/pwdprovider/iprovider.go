@@ -1,7 +1,7 @@
 package pwdprovider
 
 import (
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 )
 
 // IPwdProvider :  the calculate method of the provider is defined.

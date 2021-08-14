@@ -4,7 +4,7 @@ import (
 	"github.com/bernishen/lion-go/servicediscovery/model/dao/dbpool"
 	"github.com/bernishen/lion-go/servicediscovery/model/dao/entities"
 	"github.com/bernishen/lion-go/servicediscovery/model/service/request"
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 )
 
 // func Register() *utils.Exception {

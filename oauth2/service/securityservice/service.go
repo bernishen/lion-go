@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"encoding/base64"
 	"encoding/json"
+	"github.com/bernishen/exception"
 	"github.com/bernishen/lion-go/oauth2/service/redisservice"
-	"github.com/bernishen/lion-go/utils/exception"
 	"strings"
 	"time"
 )

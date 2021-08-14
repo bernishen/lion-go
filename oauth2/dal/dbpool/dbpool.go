@@ -1,7 +1,7 @@
 package dbpool
 
 import (
-	"github.com/bernishen/lion-go/utils/exception"
+	"github.com/bernishen/exception"
 	"time"
 
 	// gorm use and connection to mysql.
